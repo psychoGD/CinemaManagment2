@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="CinemaWithMVVM.Views.UserControls.MovieAddUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaWithMVVM.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000" Height="600" Width="1000">
+    <UserControl.Resources>
+        <Style x:Key="TextBoxLgn" TargetType="TextBox">
+            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
+            <Setter Property="FontFamily" Value="Montserrat"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="CaretBrush" Value="LightGray"></Setter>
+            <Setter Property="BorderBrush" Value="DarkGray"></Setter>
+            <Setter Property="BorderThickness" Value="0,0,0,2"></Setter>
+            <Setter Property="BorderBrush" Value="DarkGray"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="28"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0,5,0,0"></Setter>
+            <Setter Property="Padding" Value="20,0,0,0"></Setter>
+        </Style>
+        <Style x:Key="TextBlockLgn" TargetType="TextBlock">
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Foreground" Value="DarkGray"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
+            <Setter Property="FontFamily" Value="Montserrat"></Setter>
+            <Setter Property="Margin" Value="0,35,0,0"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#7152C9">
+        <Canvas>
+            <Button x:Name="BackButton" Width="50" Height="50" Background="Transparent" >
+                <Image Source="\Images\icons8_back_64.png"></Image>
+            </Button>
+        </Canvas>
+
+        <StackPanel Height="530" Width="350" Background="White">
+            <TextBlock Text="Name" Style="{StaticResource TextBlockLgn}"/>
+            <TextBox x:Name="txtUser" Style="{StaticResource TextBoxLgn}"></TextBox>
+            <TextBlock Text="Password" Style="{StaticResource TextBlockLgn}"/>
+            <TextBox x:Name="txtPhone" Style="{StaticResource TextBoxLgn}"></TextBox>
+
+            <Button Width="200" Height="28" Margin="0,30,0,0"  Name="LoginAdminBtn"
+                    BorderBrush="Transparent" Background="#CCCCFF" Content="Login" Foreground="Blue"
+                    ></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

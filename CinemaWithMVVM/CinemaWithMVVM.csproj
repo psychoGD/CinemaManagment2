@@ -61,9 +61,17 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Services\MovieService.cs" />
+    <Compile Include="ViewModels\AdminLoginMenuViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\FilmSearchViewModel.cs" />
+    <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MovieAddViewModel.cs" />
     <Compile Include="ViewModels\MovieCellViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="Views\UserControls\MovieAddUC.xaml.cs">
+      <DependentUpon>MovieAddUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\MovieUC.xaml.cs">
       <DependentUpon>MovieUC.xaml</DependentUpon>
     </Compile>
@@ -82,6 +90,10 @@
     <Compile Include="Views\UserControls\StartUc.xaml.cs">
       <DependentUpon>StartUc.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\UserControls\MovieAddUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\MovieUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

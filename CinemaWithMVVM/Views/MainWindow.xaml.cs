@@ -27,7 +27,8 @@ namespace CinemaWithMVVM
             InitializeComponent();
             //MainGrid.Children.Add(new FilmSearchUC());
             MainGrid.Children.Add(new MainMenu());
-            mediaElement1.Source = new Uri(@"C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\Songs\daily_download_20181210_128.mp3");
+            mediaElement1.Source = new Uri(@"\Songs\daily_download_20181210_128.mp3");
+            mediaElement1.Volume = 1;
             mediaElement1.Play();
         }
     }
