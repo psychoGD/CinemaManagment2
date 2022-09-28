@@ -17,7 +17,7 @@ namespace CinemaWithMVVM.Services
         {
             HttpClient httpClient = new HttpClient();
             HttpResponseMessage response = new HttpResponseMessage();
-            response = httpClient.GetAsync($@"http://www.omdbapi.com/?i=tt3896198&apikey=bc7a997c{movie}&plot=full").Result;
+            response = httpClient.GetAsync($@"http://www.omdbapi.com/?apikey=bc7a997c&s={movie}&plot=full").Result;
             var str = response.Content.ReadAsStringAsync().Result;
             Data = JsonConvert.DeserializeObject(str);
 
@@ -29,11 +29,12 @@ namespace CinemaWithMVVM.Services
                 for (int i = 0; i < 5; i++)
                 {
 
-                    response = httpClient.GetAsync($@"http://www.omdbapi.com/?apikey=ddee1dae&t={Data.Search[i].Title}&plot=full").Result;
+                    response = httpClient.GetAsync($@"http://www.omdbapi.com/?apikey=bc7a997c&t={Data.Search[i].Title}&plot=full").Result;
                     str = response.Content.ReadAsStringAsync().Result;
                     SingleData = JsonConvert.DeserializeObject(str);
                     var mymovie = new Movie
                     {
+                        OriginalDescription = SingleData.Plot,
                         Description = SingleData.Plot,
                         ImagePath = SingleData.Poster,
                         Name = SingleData.Title,

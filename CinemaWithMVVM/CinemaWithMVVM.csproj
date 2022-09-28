@@ -64,7 +64,13 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MovieCellViewModel.cs" />
-    <Compile Include="Views\FilmSearchUC.xaml.cs">
+    <Compile Include="Views\UserControls\MovieUC.xaml.cs">
+      <DependentUpon>MovieUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AdminLoginMenuUC.xaml.cs">
+      <DependentUpon>AdminLoginMenuUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\FilmSearchUC.xaml.cs">
       <DependentUpon>FilmSearchUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainMenu.xaml.cs">
@@ -76,7 +82,15 @@
     <Compile Include="Views\UserControls\StartUc.xaml.cs">
       <DependentUpon>StartUc.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\FilmSearchUC.xaml">
+    <Page Include="Views\UserControls\MovieUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\AdminLoginMenuUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\FilmSearchUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,6 +154,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\default-movie.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\icons8_back_64.png" />
+    <Resource Include="images\icons8_movie_theater_64.png" />
+    <Content Include="Songs\daily_download_20181210_128.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

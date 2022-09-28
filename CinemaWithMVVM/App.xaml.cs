@@ -13,5 +13,6 @@ namespace CinemaWithMVVM
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

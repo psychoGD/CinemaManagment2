@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CinemaWithMVVM" xmlns:local1="clr-namespace:CinemaWithMVVM.Views.UserControls"
         mc:Ignorable="d" 
-        Title="MainWindow" Height="600" Width="1000">
-    <Grid>
-        
+        Title="MainWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Name="FirstGrid">
+        <MediaElement Height="120" LoadedBehavior="Manual" Name="mediaElement1" VerticalAlignment="Top" />
+        <Grid Name="MainGrid">
+
+        </Grid>
     </Grid>
+    
 </Window>

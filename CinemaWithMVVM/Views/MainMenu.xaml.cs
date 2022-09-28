@@ -23,6 +23,7 @@ namespace CinemaWithMVVM.Views
         public MainMenu()
         {
             InitializeComponent();
+            
         }
     }
 }
