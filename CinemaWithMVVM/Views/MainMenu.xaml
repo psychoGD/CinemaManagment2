@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:CinemaWithMVVM.Views"
+             xmlns:local="clr-namespace:CinemaWithMVVM.Views" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000" Height="600" Width="1000" >
     <Grid>
@@ -34,6 +34,7 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"                           
                             Margin="0,50,0,0"
+                    Command="{Binding AdminLoginMenuCommand}"
                             >
                 <Button.Style>
                     <Style TargetType="Button">
@@ -56,7 +57,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            
+            <!--<Button Width="100" Height="100" Command="{Binding }"></Button>-->
             <Button x:Name="btnUser" 
                     Canvas.Right="20"
                     Canvas.Top="150"
@@ -68,6 +69,7 @@
                             Cursor="Hand"                           
                             Margin="0,50,0,0"
                     Width="Auto"
+                    
                             >
                 <Button.Style>
                     <Style TargetType="Button">

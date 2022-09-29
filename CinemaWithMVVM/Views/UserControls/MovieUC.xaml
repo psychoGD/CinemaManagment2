@@ -8,17 +8,16 @@
              d:DesignHeight="100" d:DesignWidth="1000" Height="100" Width="1000">
     <Grid Background="White" >
         <StackPanel Orientation="Horizontal">
-            <Image Name="MovieImg" Width="100" Height="70" Margin="10" Stretch="Fill"></Image>
             <TextBlock Name="MovieNameTB" TextWrapping="Wrap"
                        Width="300" VerticalAlignment="Top" 
                        Margin="20,30,0,0" FontSize="20" Foreground="#314ca0" ></TextBlock>
             <TextBlock Name="MovieTimeTB" TextWrapping="Wrap"
                        Width="60" VerticalAlignment="Top" 
-                       Margin="40,30,0,0" FontSize="20" Foreground="Black"  ></TextBlock>
+                       Margin="20,30,0,0" FontSize="20" Foreground="Black"  ></TextBlock>
             <TextBlock Name="MoviePriceTB" TextWrapping="Wrap"
                        Width="100" VerticalAlignment="Top" 
-                       Margin="20,30,0,0" FontSize="20" Foreground="#314ca0"  ></TextBlock>
-            <Button Width="300" Height="70" Background="Transparent" BorderBrush="Gray">
+                       Margin="20,30,20,0" FontSize="20" Foreground="#314ca0"  ></TextBlock>
+            <Button Margin="20,0,0,0" Width="300" Height="70" Background="Transparent" BorderBrush="Gray">
                 <StackPanel Orientation="Horizontal" >
                     <Label Width="100" Content="Seats" FontSize="30" ></Label>
                     <Image   Width="50" Height="50" Source="\images\icons8_movie_theater_64.png"></Image>

@@ -14,13 +14,25 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal">
-                
+                <Button Width="100" Background="Transparent">
+                    <Image Source="C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\images\backIcon_Black.png"></Image>
+                </Button>
                 <TextBox Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="26" FontWeight="ExtraBlack" Width="600"></TextBox>
                 <Button Command="{Binding SearchCommand}" Background="Transparent" FontSize="26" FontWeight="ExtraBlack" Width="200">Search</Button>
             </StackPanel>
 
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-                <WrapPanel Orientation="Horizontal" Name="mypanel" Panel.ZIndex="2" ></WrapPanel>
+                <!--<WrapPanel Orientation="Horizontal" Name="mypanel" Panel.ZIndex="2" ></WrapPanel>-->
+                <ListBox
+                Name="listbox"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Vertical"></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
             </ScrollViewer>
 
         </Grid>

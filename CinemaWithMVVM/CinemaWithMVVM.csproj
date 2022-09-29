@@ -62,6 +62,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Services\MovieService.cs" />
     <Compile Include="ViewModels\AdminLoginMenuViewModel.cs" />
+    <Compile Include="ViewModels\AdminMenuViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\FilmSearchViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
@@ -69,6 +70,9 @@
     <Compile Include="ViewModels\MovieAddViewModel.cs" />
     <Compile Include="ViewModels\MovieCellViewModel.cs" />
     <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="Views\UserControls\AdminMenuUC.xaml.cs">
+      <DependentUpon>AdminMenuUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\MovieAddUC.xaml.cs">
       <DependentUpon>MovieAddUC.xaml</DependentUpon>
     </Compile>
@@ -90,6 +94,10 @@
     <Compile Include="Views\UserControls\StartUc.xaml.cs">
       <DependentUpon>StartUc.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\UserControls\AdminMenuUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\MovieAddUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +182,7 @@
   <ItemGroup>
     <Resource Include="images\icons8_back_64.png" />
     <Resource Include="images\icons8_movie_theater_64.png" />
+    <Resource Include="images\backIcon_Black.png" />
     <Content Include="Songs\daily_download_20181210_128.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CinemaWithMVVM.Views
+namespace CinemaWithMVVM.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for AdminMenuUC.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class AdminMenuUC : UserControl
     {
-        public MainMenu()
+        public AdminMenuUC()
         {
             InitializeComponent();
-            
-            
         }
     }
 }
