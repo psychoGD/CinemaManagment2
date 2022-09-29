@@ -15,6 +15,15 @@ namespace CinemaWithMVVM.ViewModels
 
         public RelayCommand LoginCommand { get; set; }
 
+        private string errorTxt;
+
+        public string ErrorTxt
+        {
+            get { return errorTxt; }
+            set { errorTxt = value;OnPropertyChanged(); }
+        }
+
+
         private string name;
 
         public string Name
@@ -37,16 +46,22 @@ namespace CinemaWithMVVM.ViewModels
             {
                 App.MainGrid.Children.RemoveAt(0);
                 var mainMenu = new MainMenu();
+                mainMenu.DataContext = new MainMenuViewModel();
                 App.MainGrid.Children.Add(mainMenu);
             });
-            LoginCommand = new RelayCommand(o =>
+            LoginCommand = new RelayCommand(async o =>
             {
                 if(Name=="admin" && Password == "admin")
                 {
-                    App.MainGrid.Children.RemoveAt(0);
                     var adminMenu = new AdminMenuUC();
-
-                    App.MainGrid.Children.Add(mainMenu);
+                    adminMenu.DataContext =  new AdminMenuViewModel();
+                    App.MainGrid.Children.Add(adminMenu);
+                }
+                else
+                {
+                    ErrorTxt = "Name Or Password Is Incorrect";
+                    await Task.Delay(5_000);
+                    ErrorTxt = string.Empty;
                 }
             });
         }

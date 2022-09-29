@@ -24,9 +24,9 @@ namespace CinemaWithMVVM.Views
         public FilmSearchUC()
         {
             InitializeComponent();
-            var vm = new MainViewModel();
-            vm.MyPanel = mypanel;
-            this.DataContext = vm;
+            //var vm = new MainViewModel();
+            //vm.MyPanel = mypanel;
+            //this.DataContext = vm;
         }
     }
 }

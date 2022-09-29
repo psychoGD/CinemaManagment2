@@ -34,9 +34,17 @@
     <Grid Background="#7152C9">
         <Canvas>
             <Button x:Name="BackButton" Width="50" 
+                    ToolTip="Back"
                     Height="50" Background="Transparent"
                     Command="{Binding BackCommand}">
                 <Image Source="\Images\icons8_back_64.png"></Image>
+            </Button>
+            <Button x:Name="HomeButton" Width="50" 
+                    Canvas.Right="0"
+                    ToolTip="Menu"
+                    Height="50" Background="Transparent"
+                    >
+                <Image Source="\Images\home_White.png"></Image>
             </Button>
         </Canvas>
 

@@ -48,7 +48,10 @@
            
             <Button Width="200" Height="28" Margin="0,30,0,0"  Name="LoginAdminBtn"
                     BorderBrush="Transparent" Background="#CCCCFF" Content="Login" Foreground="Blue"
+                    Command="{Binding LoginCommand}"
                     ></Button>
+            <TextBlock FontSize="14" Foreground="Red" TextWrapping="Wrap"
+                       Style="{StaticResource TextBlockLgn}" Text="{Binding ErrorTxt}" ></TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>
