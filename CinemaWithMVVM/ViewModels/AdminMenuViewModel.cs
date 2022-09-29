@@ -12,6 +12,7 @@ namespace CinemaWithMVVM.ViewModels
     {
         public RelayCommand AddMovieCommand { get; set; }
         public RelayCommand BackCommand { get; set; }
+        public RelayCommand HomeCommand { get; set; }
         public AdminMenuViewModel()
         {
             BackCommand = new RelayCommand(o =>
@@ -21,9 +22,17 @@ namespace CinemaWithMVVM.ViewModels
             });
             AddMovieCommand = new RelayCommand(o =>
             {
-                var AddFilmUC = new FilmSearchUC();
-                AddFilmUC.DataContext = new FilmSearchViewModel();
+                var filmSearchViewModel = new FilmSearchViewModel();
+                var AddFilmUC = new FilmSearchUC(filmSearchViewModel);
+                
                 App.MainGrid.Children.Add(AddFilmUC);
+            });
+            HomeCommand = new RelayCommand(o =>
+            {
+                App.MainGrid.Children.Clear();
+                var mainMenu = new MainMenu();
+                mainMenu.DataContext = new MainMenuViewModel();
+                App.MainGrid.Children.Add(mainMenu);
             });
 
         }

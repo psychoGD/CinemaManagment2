@@ -24,5 +24,10 @@ namespace CinemaWithMVVM.Views.UserControls
         {
             InitializeComponent();
         }
+
+        private void MovieAddBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

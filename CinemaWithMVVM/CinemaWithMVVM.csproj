@@ -59,7 +59,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Repostories\MovieRepo.cs" />
     <Compile Include="Services\MovieService.cs" />
     <Compile Include="ViewModels\AdminLoginMenuViewModel.cs" />
     <Compile Include="ViewModels\AdminMenuViewModel.cs" />
@@ -183,6 +185,8 @@
     <Resource Include="images\icons8_back_64.png" />
     <Resource Include="images\icons8_movie_theater_64.png" />
     <Resource Include="images\backIcon_Black.png" />
+    <Resource Include="images\home.png" />
+    <Resource Include="images\home_White.png" />
     <Content Include="Songs\daily_download_20181210_128.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

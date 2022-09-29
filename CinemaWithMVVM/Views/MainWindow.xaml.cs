@@ -22,17 +22,29 @@ namespace CinemaWithMVVM
     /// </summary>
     public partial class MainWindow : Window
     {
+        private void PlaySound()
+        {
+            mediaElement1.Source = new Uri(@"C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\Songs\daily_download_20181210_128.mp3");
+            mediaElement1.Volume = 1;
+            mediaElement1.Play();
+        }
         public MainWindow()
         {
             InitializeComponent();
             //MainGrid.Children.Add(new FilmSearchUC());
             App.MainGrid = MainGrid;
-            var mainMenu = new MainMenu();
-            mainMenu.DataContext = new MainMenuViewModel();
-            MainGrid.Children.Add(mainMenu);
-            mediaElement1.Source = new Uri(@"C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\Songs\daily_download_20181210_128.mp3");
-            mediaElement1.Volume = 1;
-            mediaElement1.Play();
+            //var mainMenu = new MainMenu();
+            //mainMenu.DataContext = new MainMenuViewModel();
+            //MainGrid.Children.Add(mainMenu);
+
+            //For Test
+            var vievmodel = new FilmSearchViewModel();
+            FilmSearchUC filmSearchUC = new FilmSearchUC(vievmodel);
+            MainGrid.Children.Add(filmSearchUC);
+
+
+
+
         }
     }
 }

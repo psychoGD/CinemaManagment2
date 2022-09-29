@@ -33,19 +33,22 @@
     </UserControl.Resources>
     <Grid Background="#7152C9">
         <Canvas>
-            <Button x:Name="BackButton" Width="50" Height="50" Background="Transparent" >
+            <Button x:Name="BackButton" Width="50" Height="50" Background="Transparent" Command="{Binding BackCommand}">
                 <Image Source="\Images\icons8_back_64.png"></Image>
             </Button>
         </Canvas>
 
         <StackPanel Height="530" Width="350" Background="White">
             <TextBlock Text="Name" Style="{StaticResource TextBlockLgn}"/>
-            <TextBox x:Name="txtUser" Style="{StaticResource TextBoxLgn}"></TextBox>
-            <TextBlock Text="Password" Style="{StaticResource TextBlockLgn}"/>
-            <TextBox x:Name="txtPhone" Style="{StaticResource TextBoxLgn}"></TextBox>
+            <TextBox Text="{Binding Movie.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" x:Name="txtUser" Style="{StaticResource TextBoxLgn}"></TextBox>
+            <TextBlock Text="Price" Style="{StaticResource TextBlockLgn}"/>
+            <TextBox Text="{Binding Movie.Price,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" x:Name="txtPrice" Style="{StaticResource TextBoxLgn}"></TextBox>
+            <TextBlock Text="Time" Style="{StaticResource TextBlockLgn}"/>
+            <DatePicker Width="200" Text="{Binding Movie.dateTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="28" ></DatePicker>
 
-            <Button Width="200" Height="28" Margin="0,30,0,0"  Name="LoginAdminBtn"
-                    BorderBrush="Transparent" Background="#CCCCFF" Content="Login" Foreground="Blue"
+            <Button Width="200" Height="28" Margin="0,30,0,0"  Name="MovieAddBtn"
+                    BorderBrush="Transparent" Background="#CCCCFF" Content="Add Movie" Foreground="Blue"
+                    Command="{Binding MovieAddCommand}"
                     ></Button>
         </StackPanel>
     </Grid>

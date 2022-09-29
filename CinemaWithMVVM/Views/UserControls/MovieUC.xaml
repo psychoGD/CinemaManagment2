@@ -12,7 +12,7 @@
                        Width="300" VerticalAlignment="Top" 
                        Margin="20,30,0,0" FontSize="20" Foreground="#314ca0" ></TextBlock>
             <TextBlock Name="MovieTimeTB" TextWrapping="Wrap"
-                       Width="60" VerticalAlignment="Top" 
+                       Width="120" VerticalAlignment="Top" 
                        Margin="20,30,0,0" FontSize="20" Foreground="Black"  ></TextBlock>
             <TextBlock Name="MoviePriceTB" TextWrapping="Wrap"
                        Width="100" VerticalAlignment="Top" 

@@ -1,4 +1,5 @@
 ﻿using CinemaWithMVVM.ViewModels;
+using CinemaWithMVVM.Views.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,23 @@ namespace CinemaWithMVVM.Views
     /// </summary>
     public partial class FilmSearchUC : UserControl
     {
-        public FilmSearchUC()
+        public FilmSearchUC(FilmSearchViewModel filmSearchViewModel)
         {
             InitializeComponent();
-            //var vm = new MainViewModel();
-            //vm.MyPanel = mypanel;
-            //this.DataContext = vm;
+            FilmSearchViewModel vm = filmSearchViewModel;
+            vm.MyPanel = listbox;
+            this.DataContext = vm;
+        }
+
+        private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MovieAddUC movieAddUC = new MovieAddUC();
+            var vm = new MovieAddViewModel();
+            MovieCellViewModel mvVM = (listbox.SelectedItem as MovieCellUC).DataContext as MovieCellViewModel;
+            vm.Movie = mvVM.Movie;
+            movieAddUC.DataContext = vm;
+            
+            App.MainGrid.Children.Add(movieAddUC);
         }
     }
 }

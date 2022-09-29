@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWithMVVM.Repostories;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -15,6 +16,6 @@ namespace CinemaWithMVVM
     public partial class App : Application
     {
         public static Grid MainGrid;
-
+        public static MovieRepo moviesRepo { get; set; }
     }
 }
