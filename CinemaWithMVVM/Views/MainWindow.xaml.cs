@@ -33,16 +33,16 @@ namespace CinemaWithMVVM
         {
             InitializeComponent();
             //MainGrid.Children.Add(new SeatsUC());
-            var bT = new BuyTicketMenu();
-            var btVm = new BuyTicketMenuViewModel();
-            bT.DataContext = btVm;
-            btVm.movie = 7;
-            MainGrid.Children.Add(bT);
+            //var bT = new BuyTicketMenu();
+            //var btVm = new BuyTicketMenuViewModel();
+            //bT.DataContext = btVm;
+            //btVm.movie = ;
+            //MainGrid.Children.Add(bT);
 
-            //App.MainGrid = MainGrid;
-            //var mainMenu = new MainMenu();
-            //mainMenu.DataContext = new MainMenuViewModel();
-            //MainGrid.Children.Add(mainMenu);
+            App.MainGrid = MainGrid;
+            var mainMenu = new MainMenu();
+            mainMenu.DataContext = new MainMenuViewModel();
+            MainGrid.Children.Add(mainMenu);
 
             //For Test
             //var vievmodel = new FilmSearchViewModel();

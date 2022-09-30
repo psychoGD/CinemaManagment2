@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWithMVVM.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,13 +26,18 @@ namespace CinemaWithMVVM.Views.UserControls
             foreach (var item in App.moviesRepo.Movies)
             {
                 var movieUC = new MovieUC();
-                
+                var movieVM = new MovieViewModel();
+                movieUC.DataContext = movieVM;
+                movieVM.Movie = item;
+                listbox.Items.Add(movieUC);
             }
         }
         public UserMenu()
         {
             InitializeComponent();
-
+            AddMovies();
         }
+
+
     }
 }

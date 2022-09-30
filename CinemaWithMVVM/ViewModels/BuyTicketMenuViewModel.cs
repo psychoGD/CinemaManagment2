@@ -1,4 +1,5 @@
 ﻿using CinemaWithMVVM.Commands;
+using CinemaWithMVVM.Helper;
 using CinemaWithMVVM.Models;
 using System;
 using System.Collections.Generic;
@@ -55,9 +56,10 @@ namespace CinemaWithMVVM.ViewModels
             BuyCommand = new RelayCommand(o =>
             {
                 var count = movie.Capacity - movie.Count;
-                if (count>0 && count <= int.Parse(Count))
+                if (count>0 && count >= int.Parse(Count))
                 {
                     movie.Count+=count;
+                    FileHelper.WriteMovies(App.moviesRepo.Movies);
                     MessageBox.Show("Operation Succesfully");
                     BackFunc();
                 }

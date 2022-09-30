@@ -76,6 +76,7 @@
     <Compile Include="ViewModels\MovieEditUCViewModel.cs" />
     <Compile Include="ViewModels\MovieViewModel.cs" />
     <Compile Include="ViewModels\SeatViewModel.cs" />
+    <Compile Include="ViewModels\UserMenuViewModel.cs" />
     <Compile Include="Views\UserControls\AdminMenuUC.xaml.cs">
       <DependentUpon>AdminMenuUC.xaml</DependentUpon>
     </Compile>

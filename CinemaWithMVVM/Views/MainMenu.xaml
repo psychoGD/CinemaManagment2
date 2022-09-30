@@ -69,7 +69,7 @@
                             Cursor="Hand"                           
                             Margin="0,50,0,0"
                     Width="Auto"
-                    
+                    Command="{Binding UserMenuCommand}"
                             >
                 <Button.Style>
                     <Style TargetType="Button">
