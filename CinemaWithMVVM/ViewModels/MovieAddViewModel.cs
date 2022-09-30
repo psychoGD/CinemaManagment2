@@ -34,11 +34,17 @@ namespace CinemaWithMVVM.ViewModels
             {
                 if(Movie.Name!=String.Empty && Movie.Price!=String.Empty && Movie.dateTime.ToString() != String.Empty)
                 {
-                    App.moviesRepo.AddMovie(Movie);
+                    var flag = App.moviesRepo.AddMovie(Movie);
+                    if (flag)
+                    {
+                        MessageBox.Show("Movie Added Succesfully");
+                        App.MainGrid.Children.RemoveAt(App.MainGrid.Children.Count - 1);
+                    }
+                   
                 }
                 else
                 {
-                    MessageBox.Show("");
+                    MessageBox.Show("Error.Fill All Questionnaire");
                 }
                 
             });

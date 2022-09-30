@@ -13,6 +13,8 @@ namespace CinemaWithMVVM.ViewModels
         public RelayCommand AddMovieCommand { get; set; }
         public RelayCommand BackCommand { get; set; }
         public RelayCommand HomeCommand { get; set; }
+        public RelayCommand EditMenuCommand { get; set; }
+
         public AdminMenuViewModel()
         {
             BackCommand = new RelayCommand(o =>
@@ -33,6 +35,13 @@ namespace CinemaWithMVVM.ViewModels
                 var mainMenu = new MainMenu();
                 mainMenu.DataContext = new MainMenuViewModel();
                 App.MainGrid.Children.Add(mainMenu);
+            });
+            EditMenuCommand = new RelayCommand(o =>
+            {
+                var vm = new EditMoviesViewModel();
+                var editMenu = new AdminEditMoviesUC(vm);
+
+                App.MainGrid.Children.Add(editMenu);
             });
 
         }

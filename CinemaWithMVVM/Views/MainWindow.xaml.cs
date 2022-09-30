@@ -1,5 +1,6 @@
 ﻿using CinemaWithMVVM.ViewModels;
 using CinemaWithMVVM.Views;
+using CinemaWithMVVM.Views.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,16 +32,22 @@ namespace CinemaWithMVVM
         public MainWindow()
         {
             InitializeComponent();
-            //MainGrid.Children.Add(new FilmSearchUC());
-            App.MainGrid = MainGrid;
+            //MainGrid.Children.Add(new SeatsUC());
+            var bT = new BuyTicketMenu();
+            var btVm = new BuyTicketMenuViewModel();
+            bT.DataContext = btVm;
+            btVm.movie = 7;
+            MainGrid.Children.Add(bT);
+
+            //App.MainGrid = MainGrid;
             //var mainMenu = new MainMenu();
             //mainMenu.DataContext = new MainMenuViewModel();
             //MainGrid.Children.Add(mainMenu);
 
             //For Test
-            var vievmodel = new FilmSearchViewModel();
-            FilmSearchUC filmSearchUC = new FilmSearchUC(vievmodel);
-            MainGrid.Children.Add(filmSearchUC);
+            //var vievmodel = new FilmSearchViewModel();
+            //FilmSearchUC filmSearchUC = new FilmSearchUC(vievmodel);
+            //MainGrid.Children.Add(filmSearchUC);
 
 
 

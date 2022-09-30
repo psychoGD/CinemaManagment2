@@ -18,30 +18,34 @@ using System.Windows.Shapes;
 namespace CinemaWithMVVM.Views
 {
     /// <summary>
-    /// Interaction logic for FilmSearchUC.xaml
+    /// Interaction logic for AdminEditMoviesUC.xaml
     /// </summary>
-    public partial class FilmSearchUC : UserControl
+    public partial class AdminEditMoviesUC : UserControl
     {
-        public FilmSearchUC(FilmSearchViewModel filmSearchViewModel)
+        public AdminEditMoviesUC(EditMoviesViewModel editMoviesViewModel)
         {
             InitializeComponent();
-
-            //Here Is The Reason I Do This To Throw A ListBox to ViewModel
-
-            FilmSearchViewModel vm = filmSearchViewModel;
+            EditMoviesViewModel vm = editMoviesViewModel;
             vm.MyPanel = listbox;
             this.DataContext = vm;
         }
-        //And Here is Why I am Not Do This In ViewModel.Because In ViewModel I Can't Bind MouseDoubleClick Event To Any Command
+
         private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MovieAddUC movieAddUC = new MovieAddUC();
-            var vm = new MovieAddViewModel();
+            //MovieAddUC movieAddUC = new MovieAddUC();
+            //var vm = new MovieAddViewModel();
+            //MovieCellViewModel mvVM = (listbox.SelectedItem as MovieCellUC).DataContext as MovieCellViewModel;
+            //vm.Movie = mvVM.Movie;
+            //movieAddUC.DataContext = vm;
+
+            //App.MainGrid.Children.Add(movieAddUC);
+            MovieEditUC movieEditUC = new MovieEditUC();
+            var vm = new MovieEditUCViewModel();
             MovieCellViewModel mvVM = (listbox.SelectedItem as MovieCellUC).DataContext as MovieCellViewModel;
             vm.Movie = mvVM.Movie;
-            movieAddUC.DataContext = vm;
-            
-            App.MainGrid.Children.Add(movieAddUC);
+            movieEditUC.DataContext = vm;
+
+            App.MainGrid.Children.Add(movieEditUC);
         }
     }
 }

@@ -17,5 +17,9 @@ namespace CinemaWithMVVM
     {
         public static Grid MainGrid;
         public static MovieRepo moviesRepo { get; set; }
+        public App()
+        {
+            moviesRepo = new MovieRepo();
+        }
     }
 }

@@ -66,17 +66,30 @@
     <Compile Include="ViewModels\AdminLoginMenuViewModel.cs" />
     <Compile Include="ViewModels\AdminMenuViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BuyTicketMenuViewModel.cs" />
+    <Compile Include="ViewModels\EditMoviesViewModel.cs" />
     <Compile Include="ViewModels\FilmSearchViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MovieAddViewModel.cs" />
     <Compile Include="ViewModels\MovieCellViewModel.cs" />
+    <Compile Include="ViewModels\MovieEditUCViewModel.cs" />
     <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="ViewModels\SeatViewModel.cs" />
     <Compile Include="Views\UserControls\AdminMenuUC.xaml.cs">
       <DependentUpon>AdminMenuUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\AdminEditMoviesUC.xaml.cs">
+      <DependentUpon>AdminEditMoviesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\BuyTicketMenu.xaml.cs">
+      <DependentUpon>BuyTicketMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\MovieAddUC.xaml.cs">
       <DependentUpon>MovieAddUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MovieEditUC.xaml.cs">
+      <DependentUpon>MovieEditUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\MovieUC.xaml.cs">
       <DependentUpon>MovieUC.xaml</DependentUpon>
@@ -93,14 +106,32 @@
     <Compile Include="Views\UserControls\MovieCellUC.xaml.cs">
       <DependentUpon>MovieCellUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\SeatsUC.xaml.cs">
+      <DependentUpon>SeatsUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\StartUc.xaml.cs">
       <DependentUpon>StartUc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserMenu.xaml.cs">
+      <DependentUpon>UserMenu.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\UserControls\AdminMenuUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UserControls\AdminEditMoviesUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\BuyTicketMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\MovieAddUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\MovieEditUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,7 +167,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UserControls\SeatsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UserControls\StartUc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,6 +226,7 @@
     <Resource Include="images\backIcon_Black.png" />
     <Resource Include="images\home.png" />
     <Resource Include="images\home_White.png" />
+    <Resource Include="images\seat_64.png" />
     <Content Include="Songs\daily_download_20181210_128.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CinemaWithMVVM.Repostories
 {
@@ -25,10 +26,19 @@ namespace CinemaWithMVVM.Repostories
             }
         }
 
-        public void AddMovie(Movie movie)
+        public bool AddMovie(Movie movie)
         {
+            foreach (var item in Movies)
+            {
+                if (item.Name == movie.Name && item.dateTime == movie.dateTime)
+                {
+                    MessageBox.Show($"This Movie Exist in {item.dateTime}");
+                    return false;
+                }
+            }
             Movies.Add(movie);
             FileHelper.WriteMovies(Movies);
+            return true;
         }
     }
 }
