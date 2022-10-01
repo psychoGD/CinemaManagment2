@@ -15,7 +15,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <Button Width="70" Background="Transparent" Command="{Binding BackCommand}">
-                    <Image Source="C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\images\backIcon_Black.png"></Image>
+                    <Image Source="\images\backIcon_Black.png"></Image>
                 </Button>
                 <Button Width="930" Background="Transparent" Content="Refresh" FontSize="30" 
                         BorderThickness="0" Command="{Binding RefreshCommand}"></Button>

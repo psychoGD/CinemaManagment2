@@ -15,7 +15,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <Button Width="100" Background="Transparent" Command="{Binding BackCommand}">
-                    <Image Source="C:\Users\Huseyn\source\repos\CinemaProject_Copy\CinemaWithMVVM\images\backIcon_Black.png"></Image>
+                    <Image Source="\images\backIcon_Black.png"></Image>
                 </Button>
                 <TextBox Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="26" FontWeight="ExtraBlack" Width="600"></TextBox>
                 <Button Command="{Binding SearchCommand}" Background="Transparent" FontSize="26" FontWeight="ExtraBlack" Width="200">Search</Button>
