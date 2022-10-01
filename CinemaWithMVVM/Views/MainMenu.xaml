@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000" Height="600" Width="1000" >
     <Grid>
-        <Image Source="C:\Users\Huseyn\source\repos\CinemaWithMVVM\CinemaWithMVVM\images\collage-copy.jpg"
+        <Image Source="\images\collage-copy.jpg"
                Stretch="UniformToFill" >
             <Image.Effect>
                 <BlurEffect Radius="7"/>
